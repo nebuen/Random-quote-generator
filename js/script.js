@@ -44,12 +44,14 @@ let quotes = [
   }
 ];
 
-console.log(quotes);
 
 /***
  * `getRandomQuote` function
 ***/
-
+const getRandomQuote = (array) => {
+  let randomNumber = Math.floor(Math.random() * array.length);
+  return array[randomNumber];
+}
 
 
 /***
