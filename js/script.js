@@ -10,7 +10,39 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
-
+let quites = [
+  {
+    quote: `People with talent often have the wrong impression that things will go as they think.`,
+    source: `Karma Akabane`,
+    citation: `Assassination Classroom`
+  },
+  {
+    quote: `Human strength lies in the ability to change yourself.`,
+    source: `Saitama`,
+    citation: `One punch man`
+  },
+  {
+    quote: `You should enjoy the little detours to the fullest. Because that's where you'll find the things more important than what you want.`,
+    source: `Ging Freecss`,
+    citation: `HXH`
+  }, 
+  {
+    quote: `Any fool can write code that a computer can understand. Good programmers write code that humans can understand.`,
+    source: `Martin Fowler`
+  }, 
+  {
+    quote: `Wax on, wax off.`,
+    source: `Mr Miyagi`,
+    citation: `The Karate Kid`,
+    year: 1984
+  }, 
+  {
+    quote: `Why so serious?`,
+    source: `Joker`,
+    citation: `The Dark Knight`,
+    year: 2008
+  }
+];
 
 
 /***
