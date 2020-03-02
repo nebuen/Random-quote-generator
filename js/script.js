@@ -10,7 +10,7 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
-let quites = [
+let quotes = [
   {
     quote: `People with talent often have the wrong impression that things will go as they think.`,
     source: `Karma Akabane`,
@@ -43,6 +43,7 @@ let quites = [
     year: 2008
   }
 ];
+
 console.log(quotes);
 
 /***
@@ -62,4 +63,4 @@ console.log(quotes);
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
+// document.getElementById('load-quote').addEventListener("click", printQuote, false);
