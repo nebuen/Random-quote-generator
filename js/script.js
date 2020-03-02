@@ -43,7 +43,7 @@ let quites = [
     year: 2008
   }
 ];
-
+console.log(quotes);
 
 /***
  * `getRandomQuote` function
