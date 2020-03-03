@@ -116,6 +116,7 @@ const printQuote = () => {
 
 
   }
+  // added random color, every click or interval background color will change randomly
   getRandomColor();
   return document.getElementById('quote-box').innerHTML = html;
 }
