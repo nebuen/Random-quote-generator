@@ -10,6 +10,7 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
  * citation = '' // year = 0 so i can use it for conditional much easier
+ * added tags for all
 ***/
 let quotes = [
   {
