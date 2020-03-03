@@ -111,4 +111,4 @@ console.log(printQuote());
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-// document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", printQuote, false);
