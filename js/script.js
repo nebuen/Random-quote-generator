@@ -111,4 +111,6 @@ console.log(printQuote());
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
+// call printQuote function every 10 seconds
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+setInterval(printQuote, 10000);
