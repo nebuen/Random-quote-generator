@@ -9,6 +9,7 @@ project 1 - A Random Quote Generator
 
 /*** 
  * `quotes` array 
+ * citation = '' // year = 0 so i can use it for conditional much easier
 ***/
 let quotes = [
   {
@@ -52,15 +53,18 @@ let quotes = [
 
 /***
  * `getRandomQuote` function
+ * select number from 0 - 5 as the index starts with zero. no need to add 1
 ***/
 const getRandomQuote = (array) => {
   let randomNumber = Math.floor(Math.random() * array.length);
   return array[randomNumber];
 }
-//console.log(getRandomQuote(quotes));
+
 
 /***
  * `printQuote` function
+ * - randomNumber() function to give us random number. randomly select array object from array `quotes`
+ * - made variable for every .notation to get the `values` from the `quoute` array to make a lot easier to use for the conditional
 ***/
 const printQuote = () => {
   randomNumber = getRandomQuote(quotes);
@@ -69,34 +73,38 @@ const printQuote = () => {
   citation = randomNumber.citation;
   year = randomNumber.year;
   html = '';
-
+// not adding citation and year incase we don't have any.
   if(citation == ''){
     html += `<p class="quote">${quote}</p>
-    <p class="source">${source}
-    `;
+              <p class="source">${source}
+              `;
+
+
     if (year == 0){
       html += `</p>`;
     } else {
       html += `<span class = "year">${year}</span></p>`;
     }
+
+
   } else {
     html += `<p class="quote">${quote}</p>
-    <p class="source">${source}
-    <span class = "citation">${citation}</span>
-    `;
+              <p class="source">${source}
+              <span class = "citation">${citation}</span>
+              `;
+
+
     if (year == 0){
       html += `</p>`;
     } else {
       html += `<span class = "year">${year}</span></p>`;
     }
+
+
   }
   return document.getElementById('quote-box').innerHTML = html;
 }
 console.log(printQuote());
-// html += `<p class="quote">${quote}</p>
-//     <p class="source">${source}
-//       <span class="year">${year}</span>
-//     </p>`
 
 /***
  * click event listener for the print quote button
