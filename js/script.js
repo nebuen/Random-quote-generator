@@ -62,6 +62,20 @@ const getRandomQuote = (array) => {
 
 
 /***
+ * `getRandomColor` function
+ * got this code from `https://stackoverflow.com/questions/1484506/random-color-generator`
+***/
+const getRandomColor = () => {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  total = document.body.style.backgroundColor = color;
+  return total;
+}
+
+/***
  * `printQuote` function
  * - randomNumber() function to give us random number. randomly select array object from array `quotes`
  * - made variable for every .notation to get the `values` from the `quoute` array to make a lot easier to use for the conditional
@@ -102,6 +116,7 @@ const printQuote = () => {
 
 
   }
+  getRandomColor();
   return document.getElementById('quote-box').innerHTML = html;
 }
 console.log(printQuote());
