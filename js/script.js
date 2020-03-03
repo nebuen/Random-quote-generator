@@ -16,37 +16,43 @@ let quotes = [
     quote: `People with talent often have the wrong impression that things will go as they think.`,
     source: `Karma Akabane`,
     citation: `Assassination Classroom`,
-    year: 0
+    year: 0,
+    tags: `Anime`
   },
   {
     quote: `Human strength lies in the ability to change yourself.`,
     source: `Saitama`,
     citation: `One punch man`,
-    year: 0
+    year: 0,
+    tags: `Anime`
   },
   {
     quote: `You should enjoy the little detours to the fullest. Because that's where you'll find the things more important than what you want.`,
     source: `Ging Freecss`,
     citation: `HXH`,
-    year: 0
+    year: 0,
+    tags: `Anime`
   }, 
   {
     quote: `Any fool can write code that a computer can understand. Good programmers write code that humans can understand.`,
     source: `Martin Fowler`,
     citation: '',
-    year: 0
+    year: 0,
+    tags: `Motivation`
   }, 
   {
     quote: `Wax on, wax off.`,
     source: `Mr Miyagi`,
     citation: `The Karate Kid`,
-    year: 1984
+    year: 1984,
+    tags: `Humor`
   }, 
   {
     quote: `Why so serious?`,
     source: `Joker`,
     citation: `The Dark Knight`,
-    year: 2008
+    year: 2008,
+    tags: `Politics`
   }
 ];
 
@@ -86,6 +92,7 @@ const printQuote = () => {
   source = randomNumber.source;
   citation = randomNumber.citation;
   year = randomNumber.year;
+  tags = randomNumber.tags;
   html = '';
 // not adding citation and year incase we don't have any.
   if(citation == ''){
@@ -95,9 +102,11 @@ const printQuote = () => {
 
 
     if (year == 0){
-      html += `</p>`;
+      html += `<span class = "tags">, ${tags}</span>
+                </p>`;
     } else {
-      html += `<span class = "year">${year}</span></p>`;
+      html += `<span class = "year">${year}</span>
+              <span class = "tags">, ${tags}</span></p>`;
     }
 
 
@@ -109,9 +118,12 @@ const printQuote = () => {
 
 
     if (year == 0){
-      html += `</p>`;
+      html += `<span class = "tags">, ${tags}</span>
+              </p>`;
     } else {
-      html += `<span class = "year">${year}</span></p>`;
+      html += `<span class = "year">${year}</span>
+              <span class = "tags">, ${tags}</span>
+              </p>`;
     }
 
 
