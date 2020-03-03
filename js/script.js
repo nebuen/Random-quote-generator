@@ -68,12 +68,35 @@ const printQuote = () => {
   source = randomNumber.source;
   citation = randomNumber.citation;
   year = randomNumber.year;
-  
-  quotehtml = ``;
-  sourcehtml = ``;
-  
+  html = '';
+
+  if(citation == ''){
+    html += `<p class="quote">${quote}</p>
+    <p class="source">${source}
+    `;
+    if (year == 0){
+      html += `</p>`;
+    } else {
+      html += `<span class = "year">${year}</span></p>`;
+    }
+  } else {
+    html += `<p class="quote">${quote}</p>
+    <p class="source">${source}
+    <span class = "citation">${citation}</span>
+    `;
+    if (year == 0){
+      html += `</p>`;
+    } else {
+      html += `<span class = "year">${year}</span></p>`;
+    }
+  }
+  return document.getElementById('quote-box').innerHTML = html;
 }
 console.log(printQuote());
+// html += `<p class="quote">${quote}</p>
+//     <p class="source">${source}
+//       <span class="year">${year}</span>
+//     </p>`
 
 /***
  * click event listener for the print quote button
